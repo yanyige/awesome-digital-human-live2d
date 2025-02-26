@@ -16,7 +16,7 @@ export default function Live2d() {
             canvasRef.current.style.backgroundImage = `url('/backgrounds/${background}.jpg')`;
         } else {
             // 去掉背景图
-            canvasRef.current.style.backgroundImage = 'none';
+            canvasRef.current.style.backgroundImage = `url('/backgrounds/gate.jpg')`;
         }
     }
     
