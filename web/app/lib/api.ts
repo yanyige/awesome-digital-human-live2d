@@ -7,7 +7,7 @@ const VERSION = process.env.NEXT_PUBLIC_ADH_SERVER_VERSION || "v0";
 function getURL(): string {
   const SERVER_IP =
     process.env.NEXT_PUBLIC_ADH_SERVER_IP || globalThis.location?.hostname;
-  const URL = SERVER_PROTOCOL + "://" + SERVER_IP + ":" + SERVER_PORT;
+  const URL = SERVER_PROTOCOL + "://" + SERVER_IP;
   return URL;
 }
 
