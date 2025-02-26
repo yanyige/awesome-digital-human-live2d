@@ -41,15 +41,17 @@ export function PhoneMenu() {
   );
 }
 
-export function WindowMenu() {
+export function WindowMenu({ isAdmin = false }) {
   return (
     <div className="flex flex-no-wrap items-center justify-center text-xs md:text-base">
       <div className="mr-5 hover:text-gray-900 cursor-pointer">
         <Gallery trigger={'Gallery'}/>
       </div>
-      <div className="mr-5 hover:text-gray-900 cursor-pointer">
-        <Settings trigger={'Settings'}/>
-      </div>
+      {isAdmin && (
+        <div className="mr-5 hover:text-gray-900 cursor-pointer">
+          <Settings trigger={'Settings'}/>
+        </div>
+      )}
     </div>
   );
 }

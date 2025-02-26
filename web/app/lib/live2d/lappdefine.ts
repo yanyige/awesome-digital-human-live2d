@@ -38,7 +38,7 @@ export const LipSyncWeight = 5.0;
 
 // 模型后面的背景图像文件
 export const BackImages: string[] = [
-  'forest_trail', 'night_street'
+  'gate', 'domi', 'forest_trail', 'night_street'
 ];
 // export const BackImageDefault = '3';
 

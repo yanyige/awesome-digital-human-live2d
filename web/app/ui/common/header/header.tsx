@@ -9,6 +9,7 @@ import Github from "./github";
 import Link from "next/link";
 import useWebSocket, { ReadyState } from 'react-use-websocket';
 import { get_heatbeat_wss } from '@/app/lib/api';
+import { usePathname } from 'next/navigation';
 
 
 
@@ -26,6 +27,8 @@ export default function Header() {
             },
         }
     );
+    const pathname = usePathname();
+    const isAdmin = pathname === '/admin';
 
     useEffect(() => {
         if (readyState === ReadyState.OPEN) {
@@ -46,14 +49,14 @@ export default function Header() {
                 </Link>
 
                 <div className="hidden md:block mr-auto ml-2 md:ml-4 pl-2 md:pl-4 border-l border-gray-400">
-                    <WindowMenu />
+                    <WindowMenu isAdmin={isAdmin}/>
                 </div>
                 <div className="md:hidden ml-auto">
                     <PhoneMenu />
                 </div>
-                <div className="hidden md:block">
+                {/* <div className="hidden md:block">
                     <Github />
-                </div>
+                </div> */}
             </div>
         </header>
     );
