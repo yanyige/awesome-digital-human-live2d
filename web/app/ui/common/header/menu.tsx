@@ -25,14 +25,14 @@ export function PhoneMenu() {
         }
       }}>
         <DropdownItem key="gallery" textValue="gallery">
-          Gallery
+          配置
         </DropdownItem>
-        <DropdownItem key="settings" textValue="settings">
+        {/* <DropdownItem key="settings" textValue="settings">
           Settings
         </DropdownItem>
         <DropdownItem textValue="github">
           <Github/>
-        </DropdownItem>
+        </DropdownItem> */}
       </DropdownMenu>
     </Dropdown>
     <Gallery isOpen={galleryOpen} onClose={() => setGalleryOpen(false)} />
@@ -45,7 +45,7 @@ export function WindowMenu({ isAdmin = false }) {
   return (
     <div className="flex flex-no-wrap items-center justify-center text-xs md:text-base">
       <div className="mr-5 hover:text-gray-900 cursor-pointer">
-        <Gallery trigger={'Gallery'}/>
+        <Gallery trigger={'配置'}/>
       </div>
       {isAdmin && (
         <div className="mr-5 hover:text-gray-900 cursor-pointer">

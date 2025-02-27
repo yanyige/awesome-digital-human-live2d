@@ -74,7 +74,7 @@ function BackgroundGallery() {
     return (
         interactionMode != InteractionMode.CHATBOT ?
             <div className="gap-6 grid grid-cols-2 sm:grid-cols-4 max-h-96">
-                {[null, ...Object.keys(backImages)].map((item, index) => (
+                {[...Object.keys(backImages)].map((item, index) => (
                     <Card
                         shadow="md"
                         key={index}
@@ -152,7 +152,7 @@ export default function Gallery({isOpen: open, trigger, onClose}: {isOpen?: bool
                 <ModalContent>
                     {(onClose) => (
                         <>
-                            <ModalHeader className="flex flex-col gap-1">Gallery</ModalHeader>
+                            <ModalHeader className="flex flex-col gap-1">设置</ModalHeader>
                             <ModalBody>
                                 <div className="flex w-full flex-col">
                                     <GalleryTabs />
