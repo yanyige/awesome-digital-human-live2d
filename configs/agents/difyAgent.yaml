@@ -4,11 +4,11 @@ VERSION: "v0.0.1"
 PARAMETERS: [
   {
     NAME: "DIFY_API_URL",
-    DEFAULT: ""
+    DEFAULT: "http://dify.zjcst.cn/v1"
   },
   {
     NAME: "DIFY_API_KEY",
-    DEFAULT: ""
+    DEFAULT: "app-SfOB3uGvv654R2I4p8ApbgdF"
   },
   {
     NAME: "DIFY_API_USER",

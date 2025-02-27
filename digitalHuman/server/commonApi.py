@@ -43,18 +43,20 @@ ws_manager = ConnectionManager()
 
 @router.websocket("/v0/heartbeat")
 async def websocket_heartbeat(websocket: WebSocket):
+    # 添加日志输出，方便调试
+    print("New WebSocket connection attempt")
     await ws_manager.connect(websocket)
     try:
         while True:
             data = await websocket.receive_text()
+            print(f"Received message: {data}")
             if data == "ping":
                 await ws_manager.send_personal_message("pong", websocket)
             else:
-                # 暂不处理其它消息格式: 非探活则关闭接口
                 await ws_manager.send_personal_message("非探活请求,关闭ws连接,关闭ws后,需要重新建立连接...", websocket)
                 ws_manager.disconnect(websocket)
-
     except WebSocketDisconnect:
+        print("WebSocket disconnected")
         ws_manager.disconnect(websocket)
 
 
