@@ -1,0 +1,30 @@
+{
+	"Version": 3,
+	"FileReferences": {
+		"Moc": "rabbit.moc3",
+		"Textures": [
+			"rabbit.4096/texture_00.png",
+			"rabbit.4096/texture_01.png",
+			"rabbit.4096/texture_02.png",
+			"rabbit.4096/texture_03.png",
+			"rabbit.4096/texture_04.png"
+		],
+		"Physics": "rabbit.physics3.json",
+		"DisplayInfo": "rabbit.cdi3.json"
+	},
+	"Groups": [
+		{
+			"Target": "Parameter",
+			"Name": "LipSync",
+			"Ids": []
+		},
+		{
+			"Target": "Parameter",
+			"Name": "EyeBlink",
+			"Ids": [
+				"ParamEyeLOpen",
+				"ParamEyeROpen"
+			]
+		}
+	]
+}
