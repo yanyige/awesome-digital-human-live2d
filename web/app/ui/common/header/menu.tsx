@@ -44,9 +44,10 @@ export function PhoneMenu() {
 export function WindowMenu({ isAdmin = false }) {
   return (
     <div className="flex flex-no-wrap items-center justify-center text-xs md:text-base">
+      {isAdmin && (
       <div className="mr-5 hover:text-gray-900 cursor-pointer">
         <Gallery trigger={'配置'}/>
-      </div>
+      </div>)}
       {isAdmin && (
         <div className="mr-5 hover:text-gray-900 cursor-pointer">
           <Settings trigger={'Settings'}/>
