@@ -40,13 +40,13 @@ export const LipSyncWeight = 5.0;
 export const BackImages: string[] = [
   'gate', 'domi', 'forest_trail', 'night_street'
 ];
-// export const BackImageDefault = '3';
+export const BackImageDefault = 'gate';
 
 //模型定义----------------------------------
 export const ModelsDesc: string[] = [
-  'rabbit', 'Kei', 'Haru-1', 'Haru-2', 'Chitose', 'Mao', 'Miara', 'Tsumiki', 'Rice', 'Epsilon', 'Hibiki', 'Izumi', 'Shizuku', 'Hiyori'
+  'XiaoAn', 'Kei', 'Haru-1', 'Haru-2', 'Chitose', 'Mao', 'Miara', 'Tsumiki', 'Rice', 'Epsilon', 'Hibiki', 'Izumi', 'Shizuku', 'Hiyori'
 ];
-export const ModelDefault = 'Kei';
+export const ModelDefault = 'XiaoAn';
 // 与外部定义文件（json）匹配
 export const MotionGroupIdle = 'Idle'; // 空闲
 export const MotionGroupTapBody = 'TapBody'; // 点击身体的时候
