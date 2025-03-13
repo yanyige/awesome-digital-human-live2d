@@ -57,6 +57,31 @@
 			"Name": "嘴　张开和闭合"
 		},
 		{
+			"Id": "ParamA",
+			"GroupId": "ParamGroup3",
+			"Name": "A"
+		},
+		{
+			"Id": "ParamI",
+			"GroupId": "ParamGroup3",
+			"Name": "I"
+		},
+		{
+			"Id": "ParamU",
+			"GroupId": "ParamGroup3",
+			"Name": "U"
+		},
+		{
+			"Id": "ParamE",
+			"GroupId": "ParamGroup3",
+			"Name": "E"
+		},
+		{
+			"Id": "ParamO",
+			"GroupId": "ParamGroup3",
+			"Name": "O"
+		},
+		{
 			"Id": "ParamBodyAngleX",
 			"GroupId": "ParamGroup4",
 			"Name": "身体旋转　X"
