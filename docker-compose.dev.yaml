@@ -1,0 +1,39 @@
+version: '3'
+services:
+  # 开发环境 - 前端热更新
+  adh_web_dev:
+    build:
+      context: .
+      dockerfile: docker/adhWeb.dev.Dockerfile
+    image: "adh-web:dev"
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    volumes:
+      # 代码热更新 - 挂载源代码
+      - ./web:/workspace
+      - /workspace/node_modules  # 避免覆盖node_modules
+      - /workspace/.next         # 避免覆盖.next
+    environment:
+      - NODE_ENV=development
+    command: pnpm run dev
+
+  # 开发环境 - 后端热更新  
+  adh_server_dev:
+    build:
+      context: .
+      dockerfile: docker/adhServer.dev.Dockerfile
+    image: "adh-server:dev"
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    volumes:
+      # 代码热更新 - 挂载源代码
+      - ./digitalHuman:/workspace/digitalHuman
+      - ./configs:/workspace/configs
+      - ./test:/workspace/test
+      - ./main.py:/workspace/main.py
+    environment:
+      - PYTHONPATH=/workspace
+      - ENVIRONMENT=development
+    command: python main.py 

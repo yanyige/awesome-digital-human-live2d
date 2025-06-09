@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: docker/adhWeb.Dockerfile
-    image: "adh-web:v2.0.0"
+    image: "adh-web:latest"
     restart: always
     # network_mode: host
     ports:
@@ -17,7 +17,7 @@ services:
     build:
       context: .
       dockerfile: docker/adhServer.Dockerfile
-    image: "adh-server:v2.0.0"
+    image: "adh-server:latest"
     restart: always
     # network_mode: host
     ports:

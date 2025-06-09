@@ -20,8 +20,10 @@ RUN apt update \
   && apt-get install -y git g++ vim python3-pip ffmpeg\
   && rm -rf /var/lib/apt/lists/*
 
-# pip设置修改
-RUN pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+# pip设置修改，使用阿里云源并配置SSL
+RUN pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/ \
+    && pip config set global.trusted-host mirrors.aliyun.com \
+    && pip install --upgrade pip
 
 # 添加代码
 ADD . /workspace
